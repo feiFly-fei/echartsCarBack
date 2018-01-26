@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .chart-h400{
+            width: 600px;
+            height: 400px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="chart-h400" id="chart"></div>
+
+<script src="../assets/jquery/jquery-1.10.2.min.js"></script>
+<script src="../assets/echarts2/echarts-all.js"></script>
+<script src="../js/carWCloud.js"></script>
+<script>
+    $(function () {
+
+        var data = [
+            {
+                name: '整体价格',
+                itemStyle: {
+                    normal:{color: "red"}
+                },
+                value: 1200
+            },
+            {
+                name: '外观漂亮',
+                itemStyle: {
+                    normal:{color: "rgb(255,105,65)"}
+                },
+                value: 800
+            },
+            {
+                name: '噪音',
+                itemStyle: {
+                    normal:{color: "rgb(90,3,100)"}
+                },
+                value: 400
+            },
+            {
+                name: '方向盘',
+                itemStyle: {
+                    normal:{color: "rgb(90,3,100)"}
+                },
+                value: 900
+            },
+            {
+                name: '存储空间',
+                itemStyle: {
+                    normal:{color: "rgb(90,3,100)"}
+                },
+                value: 400
+            },
+            {
+                name: '外观漂亮',
+                itemStyle: {
+                    normal:{color: "rgb(90,3,100)"}
+                },
+                value: 800
+            },
+            {
+                name: '外观漂亮',
+                itemStyle: {
+                    normal:{color: "rgb(90,3,100)"}
+                },
+                value: 400
+            },
+            {
+                name: '外观漂亮',
+                itemStyle: {
+                    normal:{color: "rgb(90,3,100)"}
+                },
+                value: 1100
+            },
+            {
+                name: '整体价格',
+                itemStyle: {
+                    normal:{color: "rgb(90,3,100)"}
+                },
+                value: 1400
+            },
+            {
+                name: '外观漂亮',
+                itemStyle: {
+                    normal:{color: "rgb(90,3,100)"}
+                },
+                value: 1800
+            },
+            {
+                name: '外观漂亮',
+                itemStyle: {
+                    normal:{color: "rgb(90,3,100)"}
+                },
+                value: 900
+            },
+            {
+                name: '噪音小',
+                itemStyle: {
+                    normal:{color: "rgb(90,3,100)"}
+                },
+                value: 1600
+            },
+            {
+                name: '方向盘',
+                itemStyle: {
+                    normal:{color: "rgb(90,3,100)"}
+                },
+                value: 1300
+            },
+            {
+                name: '外观漂亮',
+                itemStyle: {
+                    normal:{color: "rgb(90,3,100)"}
+                },
+                value: 900
+            }
+        ];
+        var dom = document.getElementById('chart');
+        var imgSrc = "../images/ciyun_bg_suv.png";
+        var myChart = new CarWCloud(dom, imgSrc, imgSrc);
+        myChart.draw(data);
+    });
+
+</script>
+</body>
+</html>
